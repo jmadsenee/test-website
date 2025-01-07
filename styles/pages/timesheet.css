@@ -1,0 +1,181 @@
+.main {
+  max-width: 100%;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+
+  /* margin-left: auto;
+     margin-right auto;
+     Is a trick for centering an element horizontally
+     without needing a container. */
+  margin-left: auto;
+  margin-right: auto;
+  background-color: lightgrey;
+}
+
+.time-container-outer {
+  max-width: 100%;
+  margin-top: 60px;
+  margin-bottom: 10px;
+  border: 1px solid;
+  min-height: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(180,180,180);
+  box-shadow: 1px 1px 3px #555 inset;
+}
+
+.page-title {
+  font-weight: 700;
+  font-size: 28px;
+  color: blue;
+  text-align: center;
+  margin: 75px 0;
+  /* position: ; */
+  /* margin-bottom: 80px; */
+  /* margin: auto; */
+}
+
+.logo {
+  padding-top: 30px;
+  padding-left: 60px;
+  height: 100px;
+  position: absolute;
+}
+
+.logo-extra-text {
+  padding-top: 110px;
+  padding-left: 190px;
+  font-size: 22px;
+  font-style: italic;
+  position: absolute; 
+}
+
+.time-container-inner {
+  display: grid;
+  grid-template-columns: 75px auto;
+  max-width: 95%;
+  /* margin-top: 60px; */
+  margin-bottom: 40px;
+  border: 1px solid;
+  /* min-height: 200px; */
+  height: 270px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 1px 1px 3px #555 inset;
+}
+
+.line-button-container {
+  width: 54px;
+  /* height: 90px; */
+  border: 1px solid;
+  margin-top: 80px;
+  margin-bottom:80px;
+  margin-left: 10px;
+  box-shadow: 1px 1px 2px #555 inset;
+  /* float: left; */
+  /* position: absolute;
+  top: 50%;
+  transform: translate(0%,-50%); */
+  /* display: inline-block; */
+}
+
+.button-label {
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: underline;
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.button-shape {
+  height: 32px;
+  width: 40px;
+  border: 1px solid;
+  margin-top: 5px;
+  margin-left: 7px;
+  margin-right: auto;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.time-table-container {
+  margin-top: 10px;
+  margin-right: 10px;
+  /* width: 300px; */
+  height: 90%;
+  /* height: 150px; */
+  /* margin: 10px; */
+  /* border: 1px solid; */
+  /* float: left; */
+  box-shadow: 1px 1px 3px #555 inset;
+  
+  /* display: inline-block; */
+}
+
+table {
+  border-collapse: collapse;
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+}
+
+th {
+  font-size: 14px;
+  text-decoration: underline;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: greenyellow;
+  border: 1px solid;
+}
+
+td {
+  text-align: center;
+  border: 1px solid;
+
+}
+
+.table-data-row {
+  height: 30%;
+}
+
+.table-data-row-active {
+  background-color: whitesmoke;
+}
+
+.table-data-row-inactive {
+  background-color: #ccc;
+}
+
+.table-date-column {
+  width: 130px;
+}
+
+/* .table-chargeto-column {
+  width: 150px;
+}
+.table-costcode-column {
+  width: 150px;
+}
+.table-date-column {
+  width: 150px;
+}
+.table-date-column {
+  width: 150px;
+}
+.table-date-column {
+  width: 150px;
+}
+.table-date-column {
+  width: 150px;
+}
+.table-date-column {
+  width: 150px;
+}*/
+
+.table-note-column {
+  min-width: 100px;
+} 

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Time Track Login</title>
+
+    <!-- This code is needed for responsive design to work.
+      (Responsive design = make the website look good on
+      smaller screen sizes like a phone or a tablet). -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Load a font called Roboto from Google Fonts. -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> -->
+
+    <!-- Here are the CSS files for this page. -->
+    <link rel="stylesheet" href="styles/shared/general.css">
+    <!-- <link rel="stylesheet" href="styles/shared/timetrack-header.css"> -->
+    <link rel="stylesheet" href="styles/pages/login.css">
+  </head>
+
+  <body>
+    <!-- Button to open the modal login form -->
+    <button class="login-button js-login-button">
+      Login
+    </button>
+
+    <!-- The Modal -->
+    <div id="id01" class="modal">
+      <span class="close js-close" title="Close Modal">
+        &times;
+      </span>
+
+      <!-- Modal Content -->
+      <form action="action_page.php" method="post">
+        <div class="imgcontainer">
+          <p class="logo-extra-text">
+            ImcR Time Track
+          </p>
+          <img src="images/InfraMap HORZ Logo SVG.svg">
+        </div>
+
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+      
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+      
+          <button type="submit">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+      
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" class="cancelbtn js-cancel-button">
+            Cancel
+          </button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form> 
+    </div>
+
+    <script src="scripts/login.js"></script>
+  </body>
+</html>
+
