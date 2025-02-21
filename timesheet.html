@@ -8,19 +8,23 @@
       smaller screen sizes like a phone or a tablet). -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Load a font called Roboto from Google Fonts. -->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Load a font called Rubik from Google Fonts. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 
     <!-- Here are the CSS files for this page. -->
     <link rel="stylesheet" href="styles/shared/general.css">
+    <link rel="stylesheet" href="styles/shared/modal.css">
+    <link rel="stylesheet" href="styles/timesheet/timeEntryWindow.css">
+    <link rel="stylesheet" href="styles/timesheet/timeTable.css">
+    <link rel="stylesheet" href="styles/timesheet/historyTable.css">
     <link rel="stylesheet" href="styles/shared/timetrack-header.css">
     <link rel="stylesheet" href="styles/pages/timesheet.css">
   </head>
 
   <body>
-    <div class="timetrack-header">
+    <header class="timetrack-header">
       <div class="timetrack-header-left-section">
         <!-- <a href="timetrack.html" class="header-link">
           <img class="timetrack-logo"
@@ -51,211 +55,291 @@
           <div class="cart-text">Cart</div>
         </a> -->
       </div>
-    </div>
+    </header>
 
     <div class="main">
       <div class="time-container-outer">
-        <img src="./images/InfraMap HORZ Logo SVG.svg" class="logo">
-        <p class="logo-extra-text">
-          ImcR Time Track
-        </p>
-        <p class="page-title">
-          Time Record - Task & Budget
-        </p>
+        <div class="logo-history-container">
+          <div class="logo-container">
+            <img class="logo" src="./images/InfraMap HORZ Logo SVG.svg">
+            <div class="logo-extra-text">ImcR Time Track</div>
+          </div>
+          <div class="history-section">
+            <div class="history-table-container">
+              <table>
+                <tr>
+                  <th class="history-table-heading-tl">History</th>
+                  <th><div>Monday</div><div id="js-ht-day0">1/13/2025</div></th>
+                  <th><div>Tuesday</div><div id="js-ht-day1">1/14/2025</div></th>
+                  <th><div>Wednesday</div><div id="js-ht-day2">1/15/2025</div></th>
+                  <th><div>Thursday</div><div id="js-ht-day3">1/16/2025</div></th>
+                  <th><div>Friday</div><div id="js-ht-day4">1/17/2025</div></th>
+                  <th><div>Saturday</div><div id="js-ht-day5">1/18/2025</div></th>
+                  <th><div>Sunday</div><div id="js-ht-day6">1/19/2025</div></th>
+                  <th><div>Monday</div><div id="js-ht-day7">1/20/2025</div></th>
+                  <th><div>Tuesday</div><div id="js-ht-day8">1/21/2025</div></th>
+                  <th><div>Wednesday</div><div id="js-ht-day9">1/22/2025</div></th>
+                  <th><div>Thursday</div><div id="js-ht-day10">1/23/2025</div></th>
+                  <th><div>Friday</div><div id="js-ht-day11">1/24/2025</div></th>
+                  <th><div>Saturday</div><div id="js-ht-day12">1/25/2025</div></th>
+                  <th><div>Sunday</div><div id="js-ht-day13">1/26/2025</div></th>
+                  <th class="history-table-heading-tr">Totals</th>
+                </tr>                
+                <tr>
+                  <th>Worked Hours</th>
+                  <td id="js-htwh-day0"></td>
+                  <td id="js-htwh-day1"></td>
+                  <td id="js-htwh-day2"></td>
+                  <td id="js-htwh-day3"></td>
+                  <td id="js-htwh-day4"></td>
+                  <td id="js-htwh-day5"></td>
+                  <td id="js-htwh-day6"></td>
+                  <td id="js-htwh-day7"></td>
+                  <td id="js-htwh-day8"></td>
+                  <td id="js-htwh-day9"></td>
+                  <td id="js-htwh-day10"></td>
+                  <td id="js-htwh-day11"></td>
+                  <td id="js-htwh-day12"></td>
+                  <td id="js-htwh-day13"></td>
+                  <td id="js-htwh-total"></td>
+                </tr>                
+                <tr>
+                  <th>Time OFF Hours</th>
+                  <td id="js-htoh-day0"></td>
+                  <td id="js-htoh-day1"></td>
+                  <td id="js-htoh-day2"></td>
+                  <td id="js-htoh-day3"></td>
+                  <td id="js-htoh-day4"></td>
+                  <td id="js-htoh-day5"></td>
+                  <td id="js-htoh-day6"></td>
+                  <td id="js-htoh-day7"></td>
+                  <td id="js-htoh-day8"></td>
+                  <td id="js-htoh-day9"></td>
+                  <td id="js-htoh-day10"></td>
+                  <td id="js-htoh-day11"></td>
+                  <td id="js-htoh-day12"></td>
+                  <td id="js-htoh-day13"></td>
+                  <td id="js-htoh-total"></td>
+                </tr>                
+                <tr>
+                  <th>Total Hours</th>
+                  <td id="js-htth-day0"></td>
+                  <td id="js-htth-day1"></td>
+                  <td id="js-htth-day2"></td>
+                  <td id="js-htth-day3"></td>
+                  <td id="js-htth-day4"></td>
+                  <td id="js-htth-day5"></td>
+                  <td id="js-htth-day6"></td>
+                  <td id="js-htth-day7"></td>
+                  <td id="js-htth-day8"></td>
+                  <td id="js-htth-day9"></td>
+                  <td id="js-htth-day10"></td>
+                  <td id="js-htth-day11"></td>
+                  <td id="js-htth-day12"></td>
+                  <td id="js-htth-day13"></td>
+                  <td id="js-htth-total"></td>
+                </tr>
+              </table>
+
+            </div>
+          </div>
+        </div>
+
         <div class = time-container-inner>
           <div class = line-button-container>
             <p class="button-label">line</p>
-            <button class="button-shape button-up">
+            <button class="button-shape" id="js-button-up">
               <img src="./images/green_arrow_up.png" width="27px">
             </button>
-            <button class="button-shape button-down">
+            <button class="button-shape" id="js-button-down">
               <img src="./images/green_arrow_down.png" width="27px">
-              <!-- d -->
             </button>
           </div>
-          <form class="time-table-container">
+
+          <div class="time-table-container">
             <table>
               <tr class="table-data-row table-data-row-inactive">
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td id="js-row0-column0"></td>
+                <td id="js-row0-column1"></td>
+                <td id="js-row0-column2"></td>
+                <td id="js-row0-column3"></td>
+                <td id="js-row0-column4"></td>
+                <td id="js-row0-column5"></td>
+                <td id="js-row0-column6"></td>
+                <td id="js-row0-column7"></td>
+                <td id="js-row0-column8"></td>
               </tr>
               <tr>
                 <th class="table-date-column">date</th>
-                <th>charge to:</th>
-                <th>cost code</th>
-                <th>estimate & budget class</th>
-                <th>worked office</th>
-                <th>time-in/out</th>
-                <th>worked hours</th>
-                <th>created date</th>
+                <th class="table-chargeto-column">charge to:</th>
+                <th class="table-costcode-column">cost code</th>
+                <th class="table-estbud-column">estimate & budget class</th>
+                <th class="table-workedoffice-column">worked office</th>
+                <th class="table-timeinout-column">time-in/out</th>
+                <th class="table-workedhours-column">worked hours</th>
+                <th class="table-createddate-column">created date</th>
                 <th class="table-note-column">note</th>
               </tr>
               <tr class="table-data-row table-data-row-active">
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td id="js-row1-column0" class="input-cell">
+                  Click to enter new record
+                </td>
+                <td id="js-row1-column1" class="input-cell"></td>
+                <td id="js-row1-column2" class="input-cell"></td>
+                <td id="js-row1-column3" class="input-cell"></td>
+                <td id="js-row1-column4"></td>
+                <td id="js-row1-column5" class="input-cell"></td>
+                <td id="js-row1-column6"></td>
+                <td id="js-row1-column7"></td>
+                <td id="js-row1-column8" class="input-cell"></td>
               </tr>
               <tr class="table-data-row table-data-row-inactive">
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td id="js-row2-column0"></td>
+                <td id="js-row2-column1"></td>
+                <td id="js-row2-column2"></td>
+                <td id="js-row2-column3"></td>
+                <td id="js-row2-column4"></td>
+                <td id="js-row2-column5"></td>
+                <td id="js-row2-column6"></td>
+                <td id="js-row2-column7"></td>
+                <td id="js-row2-column8"></td>
               </tr>
             </table>
-          </form>
+          </div>
         </div>
 
+        <div class="total-hours-container">
+          <div class="total-hours-label">Total Hours</div>
+          <div id="js-total-hours-display" class="total-hours-display">0.00</div>
+        </div>
       </div>
-
-      <!-- <div class="orders-grid">
-        <div class="order-container">
-          
-          <div class="order-header">
-            <div class="order-header-left-section">
-              <div class="order-date">
-                <div class="order-header-label">Order Placed:</div>
-                <div>August 12</div>
-              </div>
-              <div class="order-total">
-                <div class="order-header-label">Total:</div>
-                <div>$35.06</div>
-              </div>
-            </div>
-
-            <div class="order-header-right-section">
-              <div class="order-header-label">Order ID:</div>
-              <div>27cba69d-4c3d-4098-b42d-ac7fa62b7664</div>
-            </div>
-          </div>
-
-          <div class="order-details-grid">
-            <div class="product-image-container">
-              <img src="images/products/athletic-cotton-socks-6-pairs.jpg">
-            </div>
-
-            <div class="product-details">
-              <div class="product-name">
-                Black and Gray Athletic Cotton Socks - 6 Pairs
-              </div>
-              <div class="product-delivery-date">
-                Arriving on: August 15
-              </div>
-              <div class="product-quantity">
-                Quantity: 1
-              </div>
-              <button class="buy-again-button button-primary">
-                <img class="buy-again-icon" src="images/icons/buy-again.png">
-                <span class="buy-again-message">Buy it again</span>
-              </button>
-            </div>
-
-            <div class="product-actions">
-              <a href="tracking.html?orderId=123&productId=456">
-                <button class="track-package-button button-secondary">
-                  Track package
-                </button>
-              </a>
-            </div>
-
-            <div class="product-image-container">
-              <img src="images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg">
-            </div>
-
-            <div class="product-details">
-              <div class="product-name">
-                Adults Plain Cotton T-Shirt - 2 Pack
-              </div>
-              <div class="product-delivery-date">
-                Arriving on: August 19
-              </div>
-              <div class="product-quantity">
-                Quantity: 2
-              </div>
-              <button class="buy-again-button button-primary">
-                <img class="buy-again-icon" src="images/icons/buy-again.png">
-                <span class="buy-again-message">Buy it again</span>
-              </button>
-            </div>
-
-            <div class="product-actions">
-              <a href="tracking.html">
-                <button class="track-package-button button-secondary">
-                  Track package
-                </button>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="order-container">
-
-          <div class="order-header">
-            <div class="order-header-left-section">
-              <div class="order-date">
-                <div class="order-header-label">Order Placed:</div>
-                <div>June 10</div>
-              </div>
-              <div class="order-total">
-                <div class="order-header-label">Total:</div>
-                <div>$41.90</div>
-              </div>
-            </div>
-
-            <div class="order-header-right-section">
-              <div class="order-header-label">Order ID:</div>
-              <div>b6b6c212-d30e-4d4a-805d-90b52ce6b37d</div>
-            </div>
-          </div>
-
-          <div class="order-details-grid">
-            <div class="product-image-container">
-              <img src="images/products/intermediate-composite-basketball.jpg">
-            </div>
-
-            <div class="product-details">
-              <div class="product-name">
-                Intermediate Size Basketball
-              </div>
-              <div class="product-delivery-date">
-                Arriving on: June 17
-              </div>
-              <div class="product-quantity">
-                Quantity: 2
-              </div>
-              <button class="buy-again-button button-primary">
-                <img class="buy-again-icon" src="images/icons/buy-again.png">
-                <span class="buy-again-message">Buy it again</span>
-              </button>
-            </div>
-
-            <div class="product-actions">
-              <a href="tracking.html">
-                <button class="track-package-button button-secondary">
-                  Track package
-                </button>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div> -->
     </div>
+
+
+    <!-- The Modal Window -->
+    <div id="js-selection-window" class="modal modal-padding">
+      <!-- Modal Content -->
+      <div class="modal-content modal-width modal-content-anamatetop">
+        <div class="modal-header">
+          <span id="js-close-selection" class="close close-selection">&times;</span>
+          <span id="js-selection-window-heading">
+            Heading Text
+          </span>
+        </div>
+
+        <div id="js-selection-window-body" class="modal-body">
+          <!-- Generated HTML goes in "selection-window-body-list" -->
+          <div class="selection-window-body-list" id="js-selection-window-body-list">
+            <div class="list-window">
+              <div class="list-item js-li" id="js-li0" data-list-item="0">
+                TASK FOR A SPECIFIC PROJECT
+              </div>
+              <div class="list-item js-li" id="js-li1" data-list-item="1">
+                TASK IS NOT PROJECT SUPPORT
+              </div>
+              <div class="list-item js-li" id="js-li2" data-list-item="2">
+                PAID TIME OFF
+              </div>
+            </div>
+            <div class="description-window" id="list-item-description">
+              description of list items
+            </div>
+          </div>
+        </div>
+
+        <div id="js-modal-footer" class="modal-footer">
+          <button id="js-cancel-button" class="cancel-button">Cancel</button>
+          <button id="js-accept-button" class="accept-button">Accept</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- The Time Window -->
+    <div id="js-time-window" class="modal modal-padding">
+      <!-- Modal Content -->
+      <div class="modal-content modal-width modal-content-anamatetop">
+        <div class="modal-header">
+          <span id="js-close-time" class="close close-selection">&times;</span>
+          <span id="js-time-window-heading" class="time-window-heading">
+            <!-- Heading Text -->
+          </span>
+        </div>
+
+        <div id="js-time-window-body" class="modal-body time-window-body">
+          <div class="time-set-outer-container">
+            <div class="time-set-container">
+              <div class="time-set-text">Start Time</div>
+              <div class="time-set-control">
+                <div class="time-set-buttons-container">
+                  <button id="js-start-time-inc-button" class="time-set-button">
+                    +</button>
+                  <button id="js-start-time-dec-button" class="time-set-button">
+                    -</button>
+                </div>
+                <input type="text" id="js-start-time" class="time-set-display">
+                </input>
+                <div class="current-time-button-container">
+                  <button id="js-start-set-button" class="current-time-button">
+                    Set START to Current Time
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="time-set-container">
+              <div class="time-set-text">End Time</div>
+              <div class="time-set-control">
+                <div class="time-set-buttons-container">
+                  <button id="js-end-time-inc-button" class="time-set-button">
+                    +</button>
+                  <button id="js-end-time-dec-button" class="time-set-button">
+                    -</button>
+                </div>
+                <input type="text" id="js-end-time" class="time-set-display">
+                </input>
+                <div class="current-time-button-container">
+                  <button id="js-end-set-button" class="current-time-button">
+                    Set END to Current Time
+                  </button>
+                </div>
+              </div>            
+            </div>
+            <div class="time-set-container">
+              <div class="time-set-text"></div>
+              <button class="time-accept-button js-time-accept-button">Continue</button>
+            </div>
+          </div>
+
+
+
+
+
+
+          <!-- Generated HTML goes in "selection-window-body-list"
+          <div class="selection-window-body-list" id="js-selection-window-body-list">
+            <div class="list-window">
+              <div class="list-item js-li" id="js-li0" data-list-item="0">
+                TASK FOR A SPECIFIC PROJECT
+              </div>
+              <div class="list-item js-li" id="js-li1" data-list-item="1">
+                TASK IS NOT PROJECT SUPPORT
+              </div>
+              <div class="list-item js-li" id="js-li2" data-list-item="2">
+                PAID TIME OFF
+              </div>
+            </div>
+            <div class="description-window" id="list-item-description">
+              description of list items
+            </div>
+          </div> -->
+        </div>
+
+        <!-- <div class="modal-footer">
+          <button class="button cancel-button js-cancel-button">Cancel</button>
+          <button id="js-accept-button" class="button accept-button">Accept</button>
+        </div> -->
+      </div>
+    </div>
+
+    <script type="module" src="scripts/timesheet.js"></script>
   </body>
 </html>

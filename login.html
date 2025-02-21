@@ -11,50 +11,56 @@
     <!-- Load a font called Roboto from Google Fonts. -->
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">     -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
 
     <!-- Here are the CSS files for this page. -->
-    <link rel="stylesheet" href="styles/shared/general.css">
-    <!-- <link rel="stylesheet" href="styles/shared/timetrack-header.css"> -->
-    <link rel="stylesheet" href="styles/pages/login.css">
+    <link rel="stylesheet" href="./styles/shared/general.css">
+    <link rel="stylesheet" href="./styles/shared/modal.css">
+    <link rel="stylesheet" href="./styles/pages/login.css">
   </head>
 
   <body>
     <!-- Button to open the modal login form -->
-    <button class="login-button js-login-button">
+    <button class="button login-button js-login-button">
       Login
     </button>
 
     <!-- The Modal -->
-    <div id="id01" class="modal">
+    <div id="js-login-form-window" class="modal modal-padding">
       <span class="close js-close" title="Close Modal">
         &times;
       </span>
 
       <!-- Modal Content -->
-      <form action="action_page.php" method="post">
+      <form class="modal-content" id="js-login-form">
+        <input type="hidden" name="sourcePage" value="login">
         <div class="imgcontainer">
           <p class="logo-extra-text">
             ImcR Time Track
           </p>
-          <img src="images/InfraMap HORZ Logo SVG.svg">
+          <img src="./images/InfraMap HORZ Logo SVG.svg">
         </div>
 
         <div class="container">
-          <label for="uname"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="uname" required>
+          <label for="userName"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="userName" id="userName" required>
       
-          <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
+          <label for="password"><b>Password</b></label>
+          <!-- <input type="text" placeholder="Enter Password" name="password" id="password" required> -->
+          <input type="password" placeholder="Enter Password" name="password" id="password" class="js-password-input" required>
       
-          <button type="submit">Login</button>
+          <!-- <button class="js-submit-button"> -->
+          <button type="submit" class="button submit-button">
+              Login
+          </button>
           <label>
-            <input type="checkbox" checked="checked" name="remember"> Remember me
+            <input type="checkbox" checked="checked" name="saveUsername" id="saveUsername"> Save Username
           </label>
         </div>
       
         <div class="container" style="background-color:#f1f1f1">
-          <button type="button" class="cancelbtn js-cancel-button">
+          <button type="button" class=" button cancel-button js-cancel-button">
             Cancel
           </button>
           <span class="psw">Forgot <a href="#">password?</a></span>
@@ -62,7 +68,7 @@
       </form> 
     </div>
 
-    <script src="scripts/login.js"></script>
+    <script type="module" src="./scripts/login.js"></script>
   </body>
 </html>
 

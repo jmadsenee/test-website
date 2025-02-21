@@ -1,0 +1,28 @@
+.history-table-container table {
+  border-collapse: collapse;
+  font-size: 12px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border: 1px solid;}
+
+.history-table-container th {
+  background-color: rgb(146, 222, 99);
+  border: 1px solid;
+  cursor: default;
+  font-family: Arial Narrow;
+}
+
+.history-table-container td {
+  border: 1px solid;
+}
+
+.history-table-heading-tl {
+  font-size: 18px;
+  width: 95px;
+}
+
+.history-table-heading-tr {
+  font-size: 18px;
+  width: 55px;
+}

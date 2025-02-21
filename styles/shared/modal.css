@@ -1,0 +1,214 @@
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  /* transition: 0.3s; */
+}
+
+.modal-padding {
+  padding-top: 50px; /* Location of the modal box */
+}
+
+.modal-width {
+  max-width: 800px;
+  border: 3px solid #fff;
+  background-color: #bbb;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #bcbcbc;
+  margin: 0px auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/* Add Animation from top */
+.modal-content-anamatetop {
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* Add Zoom Animation */
+.modal-content-anamatezoom {
+  -webkit-animation-name: animatezoom; /* -webkit-animation: animatezoom 0.6s; */
+  -webkit-animation-duration: 0.6s;
+  animation-name: animatezoom;
+  animation-duration: 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+} 
+
+/* The Close Button */
+.close {
+  /* Position it in the top right corner of the modal */
+  position: absolute;
+  right: 25px;
+  top: 0;  
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  font-size: 37px;
+  color: red;
+}
+
+close:active {
+  font-size: 33px;
+}
+
+.modal-header {
+  position: relative;
+  padding: 20px 16px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.modal-body {
+  margin: 0px auto 40px auto;
+  font-size: 16px;
+  max-height: 500px;
+}
+
+.selection-window-body-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-window-wide {
+  width: 80%;
+  margin: auto;
+  /* background-color: #f1f1f1; */
+  /* line-height: 30px; */
+  max-height: 400px;
+  overflow-y: auto;
+  text-overflow: ellipsis;
+}
+
+.list-window {
+  width: 55%;
+  margin-left: 12px;
+  /* line-height: 30px; */
+  overflow-y: auto;
+
+}
+
+.description-window {
+  width: 40%;
+  height: 400px;
+  margin-right: 12px;
+  padding: 7px;
+  background-color: #f1f1f1;
+  overflow-y: auto;
+  box-shadow: 1px 1px 3px #555 inset;
+
+}
+
+.list-item {
+  padding-left: 10px;
+  line-height: 30px;
+  background-color: #f1f1f1;
+  transition: background-color 0.2s;
+  cursor: pointer;
+  box-shadow: 1px 1px 3px #555 inset;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.list-item:hover {
+  background-color: rgb(0, 207, 187);
+}
+
+.inputDiv {
+  Width: 70%;
+  margin: auto;
+  white-space: normal;
+  word-wrap: break-word;
+
+}
+
+.inputBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 70%;
+  margin: auto;
+  padding: 10px;
+  min-height: 100px;
+  font-size: 20px;
+  background-color: #f1f1f1;
+  border: none;
+  box-shadow: 1px 1px 3px #555 inset;
+}
+
+
+.modal-footer {
+  padding: 0 20px 15px 20px;
+  /* background-color: #f1f1f1; */
+}
+
+
+/* Extra style for the Accept button */
+.accept-button {
+  width: auto;
+  padding: 10px 18px;
+  background-color: rgb(120 214 75);
+  border-radius: 3px;
+  float: right;
+  background-image:
+    radial-gradient(75% 50% at 50% 0%, rgb(229, 234, 227), transparent),
+    radial-gradient(75% 35% at 50% 85%, rgb(80, 190, 29), transparent);
+  box-shadow:
+    inset 0 -2px 4px 1px rgba(120, 214, 75, .6),
+    /* inset 0 -4px 4px 1px rgba(255, 192, 63, 1), */
+    inset 0 0 2px 1px rgba(255, 255, 255, .2),
+    0 1px 4px 1px rgba(120, 214, 75, .2),
+    0 1px 4px 1px rgba(0, 0, 0, .1);
+  /* text-shadow: 0 1px 1px rgba(255, 191, 63, 0.756); */
+
+  &:hover {
+    transform: scale(1.04);
+  }
+    
+  &:active {
+    /* border-color: #0048d5; */
+    transform: scale(.94);
+    background-color: rgb(96, 201, 47);
+  }
+}

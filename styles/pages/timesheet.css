@@ -5,11 +5,6 @@
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
-
-  /* margin-left: auto;
-     margin-right auto;
-     Is a trick for centering an element horizontally
-     without needing a container. */
   margin-left: auto;
   margin-right: auto;
   background-color: lightgrey;
@@ -18,7 +13,7 @@
 .time-container-outer {
   max-width: 100%;
   margin-top: 60px;
-  margin-bottom: 10px;
+  margin-bottom: 60px;
   border: 1px solid;
   min-height: 350px;
   margin-left: auto;
@@ -27,20 +22,21 @@
   box-shadow: 1px 1px 3px #555 inset;
 }
 
-.page-title {
-  font-weight: 700;
-  font-size: 28px;
-  color: blue;
-  text-align: center;
-  margin: 75px 0;
-  /* position: ; */
-  /* margin-bottom: 80px; */
-  /* margin: auto; */
+.logo-history-container {
+  display: flex;
+  height: 180px;
+  width: 100%;
+}
+
+.logo-container {
+  position: relative;
+  width: 450px;
+  /* background-color: lightcoral; */
 }
 
 .logo {
   padding-top: 30px;
-  padding-left: 60px;
+  padding-left: 50px;
   height: 100px;
   position: absolute;
 }
@@ -53,12 +49,26 @@
   position: absolute; 
 }
 
+.history-section {
+  flex: 1;
+  display: flex;
+  /* background-color: lightblue; */
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.history-table-container {
+  height: 120px;
+  width: 96%;
+  background-color: whitesmoke;
+}
+
 .time-container-inner {
   display: grid;
   grid-template-columns: 75px auto;
   max-width: 95%;
   /* margin-top: 60px; */
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   border: 1px solid;
   /* min-height: 200px; */
   height: 270px;
@@ -69,17 +79,11 @@
 
 .line-button-container {
   width: 54px;
-  /* height: 90px; */
   border: 1px solid;
   margin-top: 80px;
-  margin-bottom:80px;
+  margin-bottom: 80px;
   margin-left: 10px;
   box-shadow: 1px 1px 2px #555 inset;
-  /* float: left; */
-  /* position: absolute;
-  top: 50%;
-  transform: translate(0%,-50%); */
-  /* display: inline-block; */
 }
 
 .button-label {
@@ -105,77 +109,41 @@
 .time-table-container {
   margin-top: 10px;
   margin-right: 10px;
-  /* width: 300px; */
-  height: 90%;
-  /* height: 150px; */
-  /* margin: 10px; */
-  /* border: 1px solid; */
-  /* float: left; */
+  margin-bottom: 10px;
   box-shadow: 1px 1px 3px #555 inset;
-  
-  /* display: inline-block; */
 }
 
-table {
-  border-collapse: collapse;
-  font-size: 16px;
-  width: 100%;
-  height: 100%;
+.close-selection {
+  right: 10px;
 }
 
-th {
-  font-size: 14px;
-  text-decoration: underline;
-  text-align: center;
-  text-transform: uppercase;
-  background-color: greenyellow;
-  border: 1px solid;
+.total-hours-container {
+  display: flex;
+  /* background-color: lightblue; */
+  height: 60px;
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-td {
-  text-align: center;
-  border: 1px solid;
-
+.total-hours-label {
+  display: flex;
+  width: 975px;
+  font-size: 18px;
+  font-weight: bold;
+  justify-content: right;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
-.table-data-row {
-  height: 30%;
-}
-
-.table-data-row-active {
+.total-hours-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  font-size: 18px;
   background-color: whitesmoke;
+  margin-left: 7px;
+  margin-bottom: 10px;
+  border: 3px ridge rgb(197, 197, 197);
 }
-
-.table-data-row-inactive {
-  background-color: #ccc;
-}
-
-.table-date-column {
-  width: 130px;
-}
-
-/* .table-chargeto-column {
-  width: 150px;
-}
-.table-costcode-column {
-  width: 150px;
-}
-.table-date-column {
-  width: 150px;
-}
-.table-date-column {
-  width: 150px;
-}
-.table-date-column {
-  width: 150px;
-}
-.table-date-column {
-  width: 150px;
-}
-.table-date-column {
-  width: 150px;
-}*/
-
-.table-note-column {
-  min-width: 100px;
-} 

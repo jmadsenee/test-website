@@ -1,0 +1,79 @@
+
+.time-table-container table {
+  border-collapse: collapse;
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+}
+
+.time-table-container th {
+  font-size: 14px;
+  text-decoration: underline;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: rgb(146, 222, 99);
+  border: 1px solid;
+  cursor: default;
+}
+
+.time-table-container td {
+  text-align: center;
+  border: 1px solid;
+
+}
+
+.table-data-row {
+  height: 30%;
+  cursor: default;
+}
+
+.table-data-row-active {
+  background-color: whitesmoke;
+  cursor: default;
+}
+
+.table-data-row-inactive {
+  background-color: #ccc;
+}
+
+.table-date-column {
+  width: 120px;
+}
+
+.input-cell {
+  cursor: pointer;
+  text-align: center;
+}
+
+.table-chargeto-column {
+  width: 130px;
+}
+
+.table-costcode-column {
+  width: 180px;
+}
+
+.table-estbud-column {
+  width: 240px;
+}
+
+.table-workedoffice-column {
+  width: 120px;
+}
+
+.table-timeinout-column {
+  width: 100px;
+}
+
+.table-workedhours-column {
+  width: 120px;
+}
+
+.table-createddate-column {
+  width: 180px;
+}
+
+.table-note-column {
+  min-width: 100px;
+  text-align: left;
+} 
