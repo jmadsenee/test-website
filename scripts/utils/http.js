@@ -1,6 +1,7 @@
 import { getCookie } from './cookies.js';
 
-const url = 'localhost';
+const url = '209.198.192.53:7199';
+// const url = 'localhost';
 
 
 export async function postFormData(form) {
@@ -14,7 +15,7 @@ export async function postFormData(form) {
   }
 
   try {
-    const response = await fetch(`http://${url}/TTBackend/FormData`, {
+    const response = await fetch(`https://${url}/TTBackend/FormData`, {
       method: "POST",
       headers: headers,
       body: formData
@@ -40,7 +41,7 @@ export async function postMessage(message) {
   }
 
   try {
-    const response = await fetch(`http://${url}/TTBackend/PostData`, {
+    const response = await fetch(`https://${url}/TTBackend/PostData`, {
       method: "POST",
       headers: headers,
       body: message
